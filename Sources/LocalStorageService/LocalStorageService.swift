@@ -16,6 +16,8 @@ public protocol LocalStorageService<TKey> {
 public final class UserDefaultsService<TKey: CustomStringConvertible>: LocalStorageService {
     public typealias TKey = TKey
     
+    public init() { }
+    
     private let defaults = UserDefaults.standard
 
     public func set(_ value: Any?, key: TKey) {
